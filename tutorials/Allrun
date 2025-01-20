@@ -1,0 +1,10 @@
+#!/bin/bash
+#------------------------------------------------------------------------------
+blockMesh > log.blockMesh
+cp -rp orig_0 0
+setFields -dict setFieldsDict > log.setFields
+setFields -dict setFieldsDict2 > log.setFields2
+decomposePar -force > log.decomposePar
+mpirun -np 4 reactingFoam -parallel > log.run
+reconstructPar > log.reconstructPar
+#------------------------------------------------------------------------------
