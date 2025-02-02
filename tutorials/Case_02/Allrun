@@ -1,0 +1,7 @@
+#!/bin/bash
+#------------------------------------------------------------------------------
+cp -rp orig_0.35 0.35
+decomposePar -force > log.decomposePar
+mpirun -np 640 reactingFoam -parallel > log.run
+reconstructPar > log.reconstructPar
+#------------------------------------------------------------------------------

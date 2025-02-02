@@ -1,0 +1,5 @@
+The polyMesh folder, which contains the mesh files and simulated data files at time step 0.35, download from the following link
+
+https://www.dropbox.com/scl/fo/qkgukytmkkk1fs328me7t/AM1NlX_NIIzqhJ81KReqBL8?rlkey=l2fqzqjdwtkosmrq2hcle8dl0&st=68vj90en&dl=0}{link} 
+
+ After downloading those folders, copy the polyMesh folder to constant directory and keep the orig_0.35 folder in the Case 02 directory. 

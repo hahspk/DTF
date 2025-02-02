@@ -1,0 +1,129 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      omega; //epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 -1 0 0 0 0];
+
+internalField   uniform 1; 
+boundaryField
+{
+
+	
+	outlet
+	{
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+	}
+	combustion-chamber
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	air-inlet
+	{
+        type            turbulentMixingLengthFrequencyInlet;
+        mixingLength    0.000001;
+        phi             phi;
+        k               k;
+        value           $internalField;
+	}
+	plenum
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	mixing-chamber
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	orifice-8mm
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	fuel-inlet1
+	{
+        type            turbulentMixingLengthFrequencyInlet;
+        mixingLength    0.000001;
+        phi             phi;
+        k               k;
+        value           $internalField;
+	}
+	fuel-inlet2
+	{
+        type            turbulentMixingLengthFrequencyInlet;
+        mixingLength    0.000001;
+        phi             phi;
+        k               k;
+        value           $internalField;
+	}
+	fuel-passage
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	lean
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	swirl
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+	fuel-n
+	{
+        type            omegaWallFunction;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+        beta1    	0.075;
+        value           $internalField;
+	}
+}
+
+
+// ************************************************************************* //

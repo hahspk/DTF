@@ -1,0 +1,94 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.000440155;
+
+boundaryField
+{
+	outlet
+	{
+        type            inletOutlet;
+        inletValue      $internalField; 
+        value           $internalField;
+	}
+	
+	combustion-chamber
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	air-inlet
+	{
+        type            turbulentIntensityKineticEnergyInlet;
+        formula    	k;
+        intensity       0.01;
+        value           $internalField; 
+	}
+	plenum
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	mixing-chamber
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	orifice-8mm
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	fuel-inlet1
+	{
+        type            turbulentIntensityKineticEnergyInlet;
+        formula    	k;
+        intensity       0.01;
+        value           $internalField; 
+	}
+	fuel-inlet2
+	{
+        type            turbulentIntensityKineticEnergyInlet;
+        formula    	k;
+        intensity       0.01;
+        value           $internalField; 
+	}
+	fuel-passage
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	lean
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	swirl
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+	fuel-n
+	{
+        type            kqRWallFunction;
+        value           $internalField; 
+	}
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,89 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 453.15;
+
+boundaryField
+{
+
+
+///////////////////////////////////////////////////////////////
+	outlet
+	{
+        type            inletOutlet;
+        inletValue      uniform 300;
+        value           uniform 300;
+	}
+//////////////////////////////////////////////////////////////	
+	combustion-chamber
+	{
+        type            zeroGradient;
+	}
+/////////////////////////////////////////////////////////////
+	air-inlet
+	{
+        type            fixedValue;
+        value           uniform 453.15;
+	}
+////////////////////////////////////////////////////////////
+	plenum
+	{
+        type            zeroGradient;
+	}
+	mixing-chamber
+	{
+        type            zeroGradient;
+	}
+	orifice-8mm
+	{
+        type            zeroGradient;
+	}
+///////////////////////////////////////////////////////////
+	fuel-inlet1
+	{
+      //  type            zeroGradient;
+        type            fixedValue;
+        value           uniform 320.15;
+	}
+	fuel-inlet2
+	{
+   //     type            zeroGradient;
+        type            fixedValue;
+        value           uniform 320.15;
+	}
+//////////////////////////////////////////////////////////
+	fuel-passage
+	{
+        type            zeroGradient;
+	}
+	lean
+	{
+        type            zeroGradient;
+	}
+	swirl
+	{
+        type            zeroGradient;
+	}
+	fuel-n
+	{
+        type            zeroGradient;
+	}
+}
+
+
+// ************************************************************************* //

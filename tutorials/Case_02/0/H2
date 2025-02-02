@@ -1,0 +1,80 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      H2;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField  uniform 0;
+
+boundaryField
+{
+
+	outlet
+	{
+        type            inletOutlet;
+        inletValue      uniform 0;
+        value           uniform 0;
+	}
+	combustion-chamber
+	{
+        type            zeroGradient;
+	}
+	air-inlet
+	{
+        type            fixedValue;
+        value           uniform 0;
+	}
+	plenum
+	{
+        type            zeroGradient;
+	}
+	mixing-chamber
+	{
+        type            zeroGradient;
+	}
+	orifice-8mm
+	{
+        type            zeroGradient;
+	}
+	fuel-inlet1
+	{
+        type            fixedValue;
+        value           uniform 1;
+	}
+	fuel-inlet2
+	{
+        type            fixedValue;
+        value           uniform 1;
+	}
+	fuel-passage
+	{
+        type            zeroGradient;
+	}
+	lean
+	{
+        type            zeroGradient;
+	}
+	swirl
+	{
+        type            zeroGradient;
+	}
+	fuel-n
+	{
+        type            zeroGradient;
+	}
+}
+
+
+// ************************************************************************* //

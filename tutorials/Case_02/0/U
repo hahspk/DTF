@@ -1,0 +1,94 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0.3);
+
+boundaryField
+{
+	
+//Outlet///////////////////////////////////////////
+	outlet
+	{
+        type            freestreamVelocity;
+        freestreamValue $internalField;
+	}
+///////////////////////////////////////////////////	
+	combustion-chamber
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+
+//Air Inlets/////////////////////////////////////////
+	air-inlet
+	{
+        type            fixedValue;
+        value           uniform (0 0 3.696);
+	}
+//////////////////////////////////////////////////////
+	plenum
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+	mixing-chamber
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+	orifice-8mm
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+
+//Fuel Inlets///////////////////////////////////////
+	fuel-inlet1
+	{
+        type            fixedValue;
+        value           uniform (0 0 94.54);
+	}
+	fuel-inlet2
+	{
+        type            fixedValue;
+        value           uniform (0 0 94.54);
+	}
+////////////////////////////////////////////////////
+	fuel-passage
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+	lean
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+	swirl
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+	fuel-n
+	{
+        type            fixedValue;
+        value           uniform (0 0 0);
+	}
+}
+
+// ************************************************************************* //

@@ -1,0 +1,575 @@
+reactions
+{
+    un-named-reaction-0
+    {
+        type            reversibleThirdBodyArrhenius;
+        reaction        "H2 = 2H";
+        A               4.577e+16;
+        beta            -1.4;
+        Ta              52533.16533;
+        coeffs          
+15
+(
+(N2 1)
+(H2 2.5)
+(H 1)
+(O2 1)
+(O 1)
+(H2O 12)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+    }
+    un-named-reaction-1
+    {
+        type            reversibleArrhenius;
+        reaction        "H2 + O = H + OH";
+        A               50.8;
+        beta            2.67;
+        Ta              3166.079275;
+    }
+    un-named-reaction-2
+    {
+        type            reversibleArrhenius;
+        reaction        "H2 + OH = H + H2O";
+        A               4.38e+10;
+        beta            0;
+        Ta              3517.306759;
+    }
+    un-named-reaction-3
+    {
+        type            reversibleArrhenius;
+        reaction        "H + O2 = O + OH";
+        A               1.14e+11;
+        beta            0;
+        Ta              7691.781277;
+    }
+    un-named-reaction-4
+    {
+        type            reversibleThirdBodyArrhenius;
+        reaction        "H + OH = H2O";
+        A               3.5e+16;
+        beta            -2;
+        Ta              0;
+        coeffs          
+15
+(
+(N2 1)
+(H2 0.73)
+(H 1)
+(O2 1)
+(O 1)
+(H2O 3.65)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+    }
+    un-named-reaction-5
+    {
+        type            reversibleArrhenius;
+        reaction        "H2O + O = 2OH";
+        A               67000;
+        beta            1.704;
+        Ta              7541.226458;
+    }
+    un-named-reaction-6
+    {
+        type            reversibleThirdBodyArrhenius;
+        reaction        "H + O = OH";
+        A               4.714e+12;
+        beta            -1;
+        Ta              0;
+        coeffs          
+15
+(
+(N2 1)
+(H2 2.5)
+(H 1)
+(O2 1)
+(O 1)
+(H2O 12)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+    }
+    un-named-reaction-7
+    {
+        type            reversibleArrheniusTroeFallOff;
+        reaction        "H2O2 = 2OH";
+        k0
+        {
+            A               2.49e+21;
+            beta            -2.3;
+            Ta              24530.0697;
+        }
+        kInf
+        {
+            A               2e+12;
+            beta            0.9;
+            Ta              24530.0697;
+        }
+        F
+        {
+            alpha           0.43;
+            Tsss            1e-30;
+            Ts              1e+30;
+            Tss             4.503599627e+15;
+        }
+        thirdBodyEfficiencies
+        {
+            coeffs          
+15
+(
+(N2 1.5)
+(H2 3.7)
+(H 1)
+(O2 1.2)
+(O 1)
+(H2O 7.65)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+        }
+    }
+    un-named-reaction-8
+    {
+        type            reversibleArrhenius;
+        reaction        "H + H2O2 = H2O + OH";
+        A               2.41e+10;
+        beta            0;
+        Ta              1997.669218;
+    }
+    un-named-reaction-9
+    {
+        type            reversibleArrhenius;
+        reaction        "H2O2 + O = HO2 + OH";
+        A               9550;
+        beta            2;
+        Ta              1997.669218;
+    }
+    un-named-reaction-10
+    {
+        type            reversibleArrhenius;
+        reaction        "H2O2 + OH = H2O + HO2";
+        A               1740000000;
+        beta            0;
+        Ta              160.014814;
+    }
+    un-named-reaction-11
+    {
+        type            reversibleArrhenius;
+        reaction        "H2O2 + OH = H2O + HO2";
+        A               7.59e+10;
+        beta            0;
+        Ta              3657.697115;
+    }
+    un-named-reaction-12
+    {
+        type            reversibleArrhenius;
+        reaction        "H + HO2 = 2OH";
+        A               7.079e+10;
+        beta            0;
+        Ta              148.4414155;
+    }
+    un-named-reaction-13
+    {
+        type            reversibleArrhenius;
+        reaction        "H + HO2 = H2 + O2";
+        A               11402000;
+        beta            1.0827;
+        Ta              278.6572442;
+    }
+    un-named-reaction-14
+    {
+        type            reversibleArrhenius;
+        reaction        "HO2 + O = O2 + OH";
+        A               3.25e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-15
+    {
+        type            reversibleArrhenius;
+        reaction        "HO2 + OH = H2O + O2";
+        A               7000000000;
+        beta            0;
+        Ta              -549.9678964;
+    }
+    un-named-reaction-16
+    {
+        type            reversibleArrhenius;
+        reaction        "HO2 + OH = H2O + O2";
+        A               4.5e+11;
+        beta            0;
+        Ta              5499.678964;
+    }
+    un-named-reaction-17
+    {
+        type            reversibleArrhenius;
+        reaction        "2HO2 = H2O2 + O2";
+        A               1e+11;
+        beta            0;
+        Ta              5555.674085;
+    }
+    un-named-reaction-18
+    {
+        type            reversibleArrhenius;
+        reaction        "2HO2 = H2O2 + O2";
+        A               190000000;
+        beta            0;
+        Ta              -708.9587162;
+    }
+    un-named-reaction-19
+    {
+        type            reversibleArrheniusTroeFallOff;
+        reaction        "H + O2 = HO2";
+        k0
+        {
+            A               1.737e+13;
+            beta            -1.23;
+            Ta              0;
+        }
+        kInf
+        {
+            A               4650000000;
+            beta            0.44;
+            Ta              0;
+        }
+        F
+        {
+            alpha           0.67;
+            Tsss            1e-30;
+            Ts              1e+30;
+            Tss             1e+30;
+        }
+        thirdBodyEfficiencies
+        {
+            coeffs          
+15
+(
+(N2 1)
+(H2 1.3)
+(H 1)
+(O2 1)
+(O 1)
+(H2O 10)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+        }
+    }
+    un-named-reaction-20
+    {
+        type            reversibleThirdBodyArrhenius;
+        reaction        "O + OH = HO2";
+        A               1e+10;
+        beta            0;
+        Ta              0;
+        coeffs          
+15
+(
+(N2 1)
+(H2 1)
+(H 1)
+(O2 1)
+(O 1)
+(H2O 1)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+    }
+    un-named-reaction-21
+    {
+        type            reversibleArrhenius;
+        reaction        "H + NH2 = H2 + NH";
+        A               4e+10;
+        beta            0;
+        Ta              1836.648022;
+    }
+    un-named-reaction-22
+    {
+        type            reversibleArrhenius;
+        reaction        "NH2 + O = NH + OH";
+        A               6800000000;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-23
+    {
+        type            reversibleArrhenius;
+        reaction        "NH2 + OH = H2O + NH";
+        A               4000;
+        beta            2;
+        Ta              503.1912388;
+    }
+    un-named-reaction-24
+    {
+        type            reversibleArrhenius;
+        reaction        "N + NH2 = 2H + N2";
+        A               7e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-25
+    {
+        type            reversibleArrhenius;
+        reaction        "NH2 + NO = NNH + OH";
+        A               6.2e+12;
+        beta            -1.15;
+        Ta              1267.035539;
+    }
+    un-named-reaction-26
+    {
+        type            reversibleArrhenius;
+        reaction        "H + NH = H2 + N";
+        A               3e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-27
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + O = H + NO";
+        A               9.2e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-28
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + OH = H2O + N";
+        A               500000000;
+        beta            0.5;
+        Ta              1006.382478;
+    }
+    un-named-reaction-29
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + OH = H2 + NO";
+        A               2e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-30
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + O2 = NO + OH";
+        A               1300;
+        beta            1.5;
+        Ta              50.31912388;
+    }
+    un-named-reaction-31
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + NO = N2 + OH";
+        A               2.2e+10;
+        beta            -0.23;
+        Ta              0;
+    }
+    un-named-reaction-32
+    {
+        type            reversibleArrhenius;
+        reaction        "N + OH = H + NO";
+        A               3.8e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-33
+    {
+        type            reversibleArrhenius;
+        reaction        "N + O2 = NO + O";
+        A               6400000;
+        beta            1;
+        Ta              3160.04098;
+    }
+    un-named-reaction-34
+    {
+        type            reversibleArrhenius;
+        reaction        "N + NO = N2 + O";
+        A               3300000000;
+        beta            0.3;
+        Ta              0;
+    }
+    un-named-reaction-35
+    {
+        type            reversibleArrhenius;
+        reaction        "NNH = H + N2";
+        A               10000000;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-36
+    {
+        type            reversibleArrhenius;
+        reaction        "H + NNH = H2 + N2";
+        A               1e+11;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-37
+    {
+        type            reversibleArrhenius;
+        reaction        "NNH + O = H + N2O";
+        A               1.9e+11;
+        beta            -0.274;
+        Ta              -11.07020725;
+    }
+    un-named-reaction-38
+    {
+        type            reversibleArrhenius;
+        reaction        "NNH + O = NH + NO";
+        A               520000000;
+        beta            0.388;
+        Ta              -205.8052167;
+    }
+    un-named-reaction-39
+    {
+        type            reversibleArrhenius;
+        reaction        "NNH + OH = H2O + N2";
+        A               5e+10;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-40
+    {
+        type            reversibleArrhenius;
+        reaction        "NNH + O2 = HO2 + N2";
+        A               5.6e+11;
+        beta            -0.385;
+        Ta              -6.541486105;
+    }
+    un-named-reaction-41
+    {
+        type            reversibleArrheniusLindemannFallOff;
+        reaction        "N2O = N2 + O";
+        k0
+        {
+            A               4e+11;
+            beta            0;
+            Ta              28480.62412;
+        }
+        kInf
+        {
+            A               1.3e+12;
+            beta            0;
+            Ta              31484.67581;
+        }
+        F
+        {
+        }
+        thirdBodyEfficiencies
+        {
+            coeffs          
+15
+(
+(N2 1.7)
+(H2 1)
+(H 1)
+(O2 1.4)
+(O 1)
+(H2O 12)
+(OH 1)
+(H2O2 1)
+(HO2 1)
+(NO 1)
+(N2O 1)
+(N 1)
+(NH 1)
+(NNH 1)
+(NH2 1)
+)
+;
+        }
+    }
+    un-named-reaction-42
+    {
+        type            reversibleArrhenius;
+        reaction        "H + N2O = N2 + OH";
+        A               33000000;
+        beta            0;
+        Ta              2379.591368;
+    }
+    un-named-reaction-43
+    {
+        type            reversibleArrhenius;
+        reaction        "H + N2O = N2 + OH";
+        A               4.4e+11;
+        beta            0;
+        Ta              9688.444113;
+    }
+    un-named-reaction-44
+    {
+        type            reversibleArrhenius;
+        reaction        "NH + NO = H + N2O";
+        A               3.19e+11;
+        beta            -0.455;
+        Ta              0;
+    }
+    un-named-reaction-45
+    {
+        type            reversibleArrhenius;
+        reaction        "N2O + O = 2NO";
+        A               2.9e+10;
+        beta            0;
+        Ta              11648.87718;
+    }
+    un-named-reaction-46
+    {
+        type            reversibleArrhenius;
+        reaction        "N2O + O = N2 + O2";
+        A               1400000000;
+        beta            0;
+        Ta              5434.465379;
+    }
+}
+Tlow            200;
+Thigh           3000;
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -rf 0.35
+rm -r 0.*
+rm -r processor*
+rm log.*
+rm -f TDAC
+rm -rf dynamicCode
+
